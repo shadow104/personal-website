@@ -19,12 +19,17 @@ const work = await Promise.all(
 function formatWorkDate(input: Date | string) {
   if (typeof input === "string") return input
 
-  const month = input.toLocaleDateString("en-US", {
-    month: "short",
-  })
+  return new Date(input).toLocaleDateString("en-GB", {
 
-  const year = new Date(input).getFullYear()
-  return `${month} ${year}`
+    month: "short",
+    year: "numeric",
+  })
+  // const month = input.toLocaleDateString("en-US", {
+  //   month: "short",
+  // })
+
+  // const year = new Date(input).getFullYear()
+  // return `${month} ${year}`
 }
 ---
 
