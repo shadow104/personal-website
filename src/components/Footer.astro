@@ -32,13 +32,13 @@ import Container from "@components/Container.astro"
               {SITE.TITLE}
             </a>
           </div>
-          <div class="flex gap-2 justify-center sm:justify-end items-center">
+          <!-- <div class="flex gap-2 justify-center sm:justify-end items-center">
             <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
             All systems normal
-          </div>
+          </div> -->
         </div>
       </Container>
     </section>
@@ -56,26 +56,26 @@ import Container from "@components/Container.astro"
               </a>
             </div>
             <div class="text-sm mt-2">
-              &copy; 2024 | All rights reserved
+              &copy; 2025 | All rights reserved <a href="https://pages.cloudflare.com" target="_blank" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend text-sm italic">
+                Hosted with Cloudflare Pages
+              </a>
             </div>
           </div>
   
           <div class="order-1 sm:order-2 flex justify-center sm:justify-end">
             <div class="flex flex-wrap gap-1 items-center justify-center">
-              {
-                SOCIALS.map((SOCIAL) => (
-                  <a 
-                    href={SOCIAL.HREF} 
-                    target="_blank" 
-                    aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`} 
-                    class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
-                  >
-                    <svg class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
-                      <use href={`/social.svg#${SOCIAL.ICON}`} />
-                    </svg>
-                  </a>
-                ))
-              }
+              {SOCIALS.map((SOCIAL) => (
+                <a 
+                  href={SOCIAL.HREF} 
+                  target="_blank" 
+                  aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`} 
+                  class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                >
+                  <svg class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+                    <use href={`/social.svg#${SOCIAL.ICON}`} />
+                  </svg>
+                </a>
+              ))}
               </div>
           </div>
         </div>
