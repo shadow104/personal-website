@@ -8,7 +8,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-sphere-demo.vercel.app",
+  site: "https://personal-site-2hx.pages.dev",
   integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
   adapter: cloudflare(),
 })
